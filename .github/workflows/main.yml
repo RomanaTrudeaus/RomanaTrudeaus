@@ -1,0 +1,90 @@
+name: CI/CD
+
+# Controls when the action will run. 
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  [workflow_dispatch, pull_request, push]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  DoaMantan:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+  Mantan-3:
+    needs: [DoaMantan]
+    runs-on: ubuntu-latest
+    name: Test on ${{ matrix.browser }}
+    strategy:
+      matrix:
+        browser: ['edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave',]
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+
+  Mantan-1:
+    needs: [DoaMantan]
+    runs-on: ubuntu-latest
+    name: Test on ${{ matrix.browser }}
+    strategy:
+      matrix:
+        browser: ['edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave',]
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+  Mantan-2:
+    needs: [DoaMantan]
+    runs-on: ubuntu-latest
+    name: Test on ${{ matrix.browser }}
+    strategy:
+      matrix:
+        browser: ['edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave',]
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+  Mantan-4:
+    needs: [DoaMantan]
+    runs-on: ubuntu-latest
+    name: Test on ${{ matrix.browser }}
+    strategy:
+     matrix:
+        browser: ['edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave', 'edge', 'chrome', 'mozilla', 'tor', 'brave',]
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          
+    
+  
